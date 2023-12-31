@@ -1,5 +1,7 @@
 package robledo.junior.picpaysimplificado.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,5 +23,9 @@ public class UserService {
         User newUser = new User(user);
         this.saveUser(newUser);
         return newUser;
+    }
+
+    public List<User> getAllUsers() {
+        return this.repository.findAll();
     }
 }
