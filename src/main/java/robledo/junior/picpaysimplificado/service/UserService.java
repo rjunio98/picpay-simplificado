@@ -36,7 +36,7 @@ public class UserService {
                 .orElseThrow(() -> new Exception("Usuário não encontrado"));
     }
     
-    public boolean validadeUser(User payer, BigDecimal amount) throws Exception{
+    public boolean validateUser(User payer, BigDecimal amount) throws Exception{
 
         if(payer.getUserType() == UserType.MERCHANT){
             throw new Exception("Usuário lojista não pode realizar transações");
